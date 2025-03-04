@@ -324,7 +324,7 @@ button {
 /* ✅ Image Gallery */
 .image-gallery {
   position: relative;
-  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   background: #D1DFF0;
   padding: 20px;
@@ -337,6 +337,10 @@ button {
 
 /* Gallery for large screens (Desktop) */
 @media (min-width: 769px) {
+  .image-gallery {
+    max-width: 1200px; /* Maximum width for desktop */
+  }
+
   .gallery-wrapper {
     width: 100%;
     display: flex;
@@ -346,18 +350,18 @@ button {
 
   .gallery-container {
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
 
   .gallery-track {
     display: flex;
-    gap: 10px; /* Adjusted for proper spacing on desktop */
+    gap: 10px;
   }
 
   .gallery-item {
-    width: 200px; /* Make the images wider on desktop */
+    width: 250px; /* Larger images for desktop */
     height: auto;
     display: flex;
     align-items: center;
@@ -482,6 +486,7 @@ button {
     cursor: not-allowed;
   }
 }
+
 
 
 /* ✅ Header Styling */
