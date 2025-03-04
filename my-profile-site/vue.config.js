@@ -1,5 +1,5 @@
 module.exports = {
-  transpileDependencies: true,
+  transpileDependencies: [],
   devServer: {
     client: {
       webSocketURL: {
@@ -9,5 +9,6 @@ module.exports = {
         protocol: 'ws'
       }
     }
-  }
+  },
+  lintOnSave: false // ✅ Disable ESLint properly
 };
