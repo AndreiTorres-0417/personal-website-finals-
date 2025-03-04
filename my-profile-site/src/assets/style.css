@@ -335,81 +335,154 @@ button {
   align-items: center;
 }
 
-.gallery-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  margin-bottom: 10px;
+/* Gallery for large screens (Desktop) */
+@media (min-width: 769px) {
+  .gallery-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-container {
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gallery-track {
+    display: flex;
+    gap: 10px; /* Adjusted for proper spacing on desktop */
+  }
+
+  .gallery-item {
+    width: 200px; /* Make the images wider on desktop */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .gallery-nav.left {
+    left: 0;
+  }
+
+  .gallery-nav.right {
+    right: 0;
+  }
+
+  .gallery-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .gallery-nav:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
-.gallery-wrapper {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  position: relative;
+/* Gallery for small screens (Mobile) */
+@media (max-width: 768px) {
+  .image-gallery {
+    width: 100%; /* Ensure it fills the screen width */
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  .gallery-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-container {
+    overflow: hidden;
+    width: 90%; /* Adjust for mobile */
+    display: flex;
+    justify-content: center;
+  }
+
+  .gallery-track {
+    display: flex;
+    gap: 5px; /* Reduce the gap between images */
+  }
+
+  .gallery-item {
+    width: 45%; /* Make images smaller on mobile */
+    max-width: 200px; /* Limit the max width */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .gallery-nav.left {
+    left: 0;
+  }
+
+  .gallery-nav.right {
+    right: 0;
+  }
+
+  .gallery-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .gallery-nav:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
-.gallery-container {
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.gallery-track {
-  display: flex;
-  gap: 10px;
-}
-
-.gallery-item {
-  width: 130px;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.gallery-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 24px;
-  border-radius: 50%;
-  transition: background 0.3s ease-in-out;
-}
-
-.gallery-nav.left {
-  left: -40px;
-}
-
-.gallery-nav.right {
-  right: -40px;
-}
-
-.gallery-nav:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.gallery-nav:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
 
 /* ✅ Header Styling */
 .header {
