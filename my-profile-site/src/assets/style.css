@@ -1,0 +1,466 @@
+/* ✅ Fix full-page coverage */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* ✅ Ensure the container spans the entire viewport */
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background: #6b7db3;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 50px;
+  min-height: 50vh;
+  color: white;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+  gap: 20px;
+}
+
+.hero-text {
+  max-width: 45%;
+}
+
+.hero-image-container {
+  max-width: 500%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ✅ Other styles */
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero-intro { /* Hi there text */
+  background: #bb99ff;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.hire-me {
+  background: white;
+  color: blue;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.portfolio {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* ✅ Bio Section */
+.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.bio-content {
+  background: #D1B3E0; /* Keep it clean */
+  padding: 30px;
+  border-radius: 10px; /* Smooth rounded edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* ✅ Tabs (Buttons) Styling */
+.tabs button {
+  background: #6b7db3;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* ✅ Hover Effect (Same as Fun Facts) */
+.tabs button:hover {
+  background: #4a5a82;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* ✅ Active Button */
+.tabs button.active {
+  background: #4a5a82;
+}
+
+
+/* Left Side (Image) */
+.bio-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right Side (Tabs & Text) */
+.bio-text {
+  flex: 1;
+}
+
+.bio-description {
+  margin-top: 20px;
+  width: 100%; /* Ensures uniform width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the left consistently */
+  text-align: left; /* Ensures consistent text alignment */
+  min-height: 250px; /* Keeps a fixed height to prevent shifting */
+  padding-left: 20px; /* Adjust spacing to match the longest content */
+}
+
+.bio-description h2 {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left; /* Keeps headings aligned */
+}
+
+.bio-description p {
+  font-size: 16px;
+  color: #333;
+}
+
+.bio-description .highlight {
+  font-weight: bold;
+}
+
+/* ✅ Fun Facts (FAQ) Section */
+.faq-section {
+  text-align: left;
+  background: #A897C1; /* Keep the same background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: black;
+}
+
+/* ✅ Accordion Buttons */
+.accordion button {
+  width: 100%;
+  padding: 15px;
+  background: white; /* Restore white background */
+  color: black; /* Restore black text */
+  border: none;
+  border-bottom: 1px solid #333;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.accordion button:hover {
+  background: #b8a6c8; /* Slightly darker lavender */
+}
+
+.accordion button:focus {
+  outline: none;
+}
+
+/* ✅ Arrow Icon for Dropdown */
+.accordion button::after {
+  content: "▼";
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.accordion button[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+/* ✅ Accordion Content */
+.accordion-content {
+  padding: 10px 15px;
+  background: #f3f0f7; /* Light grayish-lavender */
+  color: black;
+  border-radius: 0 0 5px 5px;
+}
+
+
+/* ✅ Comment Section */
+.comment-section {
+  background: #E6DAF0;
+  padding: 30px 40px; /* 🔥 Increased padding */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.comment-section h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px; /* 🔥 More padding */
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none; /* 🔥 Prevents resizing */
+}
+
+button {
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.comments {
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+.comments ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comments li {
+  padding: 10px;
+  border-bottom: 1px solid #d8cce8;
+  font-size: 16px;
+}
+
+/* ✅ Image Gallery */
+.image-gallery {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #D1DFF0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.gallery-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-item {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+}
+
+.gallery-nav.left {
+  left: -40px;
+}
+
+.gallery-nav.right {
+  right: -40px;
+}
+
+.gallery-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ✅ Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #6b7db3;
+  padding: 15px 30px; /* Reduced padding for a more compact layout */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* ✅ Adjust Flexbox Layout */
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Keeps everything closer together */
+  margin: 0 auto; /* Centers everything */
+  padding: 0 10px; /* Less space between elements */
+}
+
+/* ✅ Left Side - Website Name */
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-right: 20px; /* Reduce spacing between logo and links */
+}
+
+/* ✅ Right Side - Navigation */
+.header nav ul {
+  display: flex;
+  gap: 20px; /* Decreased gap to bring links closer */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Header Buttons (Links) */
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 8px 12px; /* Reduced padding for a smaller button size */
+  border-radius: 5px;
+}
+
+/* ✅ Hover Effect (Same as Fun Facts Buttons) */
+.header nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ddd;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+button[type="submit"] {
+  background: #D8C4E6; /* Match background color */
+  color: black; /* Contrast for readability */
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* ✅ Hover Effect */
+button[type="submit"]:hover {
+  background: #C4A8DA; /* Slightly darker shade for hover effect */
+  transform: scale(1.05); /* Subtle scaling effect */
+}
