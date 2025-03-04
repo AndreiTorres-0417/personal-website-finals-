@@ -6,8 +6,12 @@ module.exports = defineConfig({
 module.exports = {
   devServer: {
     client: {
-      overlay: false,
-      webSocketURL: false
+      webSocketURL: {
+        hostname: 'localhost',
+        pathname: '/ws',
+        port: 8080,
+        protocol: 'ws'
+      }
     }
   }
 };
